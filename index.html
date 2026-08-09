@@ -19935,7 +19935,13 @@ Error generating stack: ` + a.message + `
                                 }), y.jsx("div", {
                                     className: "mt-7 flex gap-3",
                                     children: [e3, n3, i3].map( (i, l) => y.jsx("a", {
-                                        href: "https://x.com/rurbit",
+                                        href: [
+                                            "https://x.com/rurbit",
+                                            "https://github.com/rurbit",
+                                            "https://www.linkedin.com/company/rurbit"
+                                        ][l],
+                                        target: "_blank",
+                                        rel: "noreferrer noopener",
                                         "aria-label": "Social link",
                                         className: "flex h-9 w-9 items-center justify-center rounded-full glass text-white/60 transition-colors hover:text-white",
                                         children: y.jsx(i, {
