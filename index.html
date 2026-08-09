@@ -21267,19 +21267,16 @@ Error generating stack: ` + a.message + `
                 a: "No. Rurbit runs entirely over USSD — the same technology behind checking airtime balances. Any basic GSM phone with a SIM card can send, receive, and check balances, even with zero mobile data or a 2G-only connection."
             }, {
                 q: "How does Bitcoin fit into a USSD transaction?",
-                a: "When a sender initiates a transfer, funds settle instantly on the Bitcoin Lightning Network behind the scenes. Recipients never need to handle Bitcoin directly — they see a local-currency amount and withdraw cash at an agent, or optionally hold a BTC balance."
+                a: "When a sender initiates a transfer, funds settle instantly on the Bitcoin Lightning Network behind the scenes, powered by the Blink API for reliable Lightning infrastructure."
             }, {
                 q: "Is Rurbit custodial?",
-                a: "Yes Rurbit is custodial and it uses Blink's API. Funds route through auditable Lightning channels rather than pooled omnibus accounts, and institutional partners can run independent liquidity nodes for full transparency."
+                a: "Rurbit is currently powered by Blink's custodial Lightning API, chosen for its reliability and speed in serving users in low-connectivity regions. We are actively preparing to migrate to Blink's non-custodial API as soon as it is released, moving Rurbit toward a fully non-custodial, self-sovereign model."
             }, {
                 q: "How do recipients get cash?",
-                a: "After a transfer settles, the recipient gets an SMS withdrawal code. They visit any vetted Rurbit agent — a local shop, SACCO branch, or kiosk — show the code, and receive cash in local currency within minutes."
-            }, {
-                q: "What does it cost institutions to integrate?",
-                a: "There's no infrastructure to build. Institutions get access to our dashboard and API, configure disbursement rules, and go live using our existing agent and USSD network — typically within two to four weeks."
+                a: "Rurbit features a built-in off-ramp that allows users to convert sats to BIF and transfer directly to a Lumicash account, cash out through any Lumicash agent (by entering the agent code as usual), buy airtime, or pay merchants for goods and services — all from the same USSD menu (22004#), within minutes, on any basic feature phone."
             }, {
                 q: "Which countries and currencies are supported?",
-                a: "Rurbit currently operates across 9 countries in East & West Africa and Latin America, with support for over 14 local currencies. New markets are added continuously based on agent network coverage."
+                a: "Rurbit is currently operating in Burundi, serving local communities with USSD-based Bitcoin access and BIF conversions. Our roadmap includes expanding across the entire East African Community (EAC) — Kenya, Uganda, Tanzania, Rwanda, South Sudan, and DRC — bringing multi-currency support and cross-border Lightning transfers to over 300 million people in the region."
             }];
             function S3() {
                 const [i,l] = k.useState(0);
