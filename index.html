@@ -5,6 +5,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
         <meta name="description" content="Rurbit powers instant Bitcoin remittances and global payments over USSD — no internet, no smartphone, no app. Built for rural communities and the institutions that serve them."/>
         <title>Rurbit — Bitcoin Remittances Over USSD, No Internet Required</title>
+        <link rel="icon" href="hejuru.png"/>
         <link rel="preconnect" href="https://fonts.googleapis.com"/>
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
         <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Sora:wght@500;600;700;800&display=swap" rel="stylesheet"/>
@@ -19753,7 +19754,7 @@ Error generating stack: ` + a.message + `
                                         href: "#top",
                                         className: "flex items-center",
                                         children: y.jsx("img", {
-                                            src: "rurbit+logo.jpg",
+                                            src: "rurbitblack.png",
                                             alt: "Rurbit logo",
                                             className: "h-16 w-47 object-cover"
                                         })
@@ -19771,8 +19772,10 @@ Error generating stack: ` + a.message + `
                                             className: "text-sm font-medium text-white/70 transition-colors hover:text-white",
                                             children: "Donate"
                                         }), y.jsxs("a", {
-                                            href: "#cta",
+                                            href: "https://twitter.com/rurbit",
                                             className: "group inline-flex items-center gap-1.5 rounded-full bg-gradient-to-r from-ember-400 to-ember-600 px-4 py-2 text-sm font-semibold text-ink-950 shadow-md shadow-ember-500/30 transition-transform duration-300 hover:scale-[1.04] active:scale-[0.98]",
+                                            target: "_blank",
+                                            rel: "noreferrer noopener",
                                             children: ["Get Early Access", y.jsx(m5, {
                                                 className: "h-4 w-4 transition-transform duration-300 group-hover:translate-x-0.5 group-hover:-translate-y-0.5"
                                             })]
@@ -19898,6 +19901,16 @@ Error generating stack: ` + a.message + `
                 Legal: ["Privacy Policy", "Terms of Service", "Licenses"]
             };
             function l3() {
+                const [t, s] = k.useState(!1)
+                  , u = k.useRef(null)
+                  , m = k.useRef(null);
+                const f = i => {
+                    i.preventDefault(),
+                    s(!0),
+                    m.current != null && (m.current.value = ""),
+                    u.current != null && window.clearTimeout(u.current),
+                    u.current = window.setTimeout(() => s(!1), 5e3)
+                };
                 return y.jsx("footer", {
                     className: "relative border-t border-white/5 bg-ink-900/60 pt-20",
                     children: y.jsxs("div", {
@@ -19909,17 +19922,21 @@ Error generating stack: ` + a.message + `
                                     href: "#top",
                                     className: "flex items-center gap-2.5",
                                     children: y.jsx("img", {
-                                        src: "rurbit+logo.jpg",
+                                        src: "rurbitblack.png",
                                         alt: "Rurbit logo",
                                         className: "h-16 w-47 object-cover"
                                     })
                                 }), y.jsx("p", {
                                     className: "mt-5 max-w-sm text-sm leading-relaxed text-white/50",
                                     children: "Bitcoin remittances and global payments over USSD — built for rural communities and the institutions that serve them."
+                                }), t && y.jsx("div", {
+                                    className: "mt-4 rounded-xl bg-white/10 px-4 py-3 text-sm text-emerald-300 shadow-lg shadow-emerald-500/10",
+                                    children: "Thank you for subscribing to our newsletter!"
                                 }), y.jsxs("form", {
-                                    onSubmit: i => i.preventDefault(),
-                                    className: "mt-7 flex max-w-sm items-center gap-2 rounded-full glass p-1.5 pl-4",
+                                    onSubmit: f,
+                                    className: "mt-4 flex max-w-sm items-center gap-2 rounded-full glass p-1.5 pl-4",
                                     children: [y.jsx("input", {
+                                        ref: m,
                                         type: "email",
                                         required: !0,
                                         placeholder: "you@company.com",
@@ -19972,7 +19989,7 @@ Error generating stack: ` + a.message + `
                             children: [y.jsxs("p", {
                                 children: ["© ", new Date().getFullYear(), " Rurbit Technologies, Inc. All rights reserved."]
                             }), y.jsx("p", {
-                                children: "Built for the last mile. Powered by Bitcoin."
+                                children: "Built for the last mile. Powered by Blink's API."
                             })]
                         })]
                     })
@@ -21052,7 +21069,9 @@ Error generating stack: ` + a.message + `
                                             }), i]
                                         }, i))
                                     }), y.jsx("a", {
-                                        href: "#cta",
+                                        href: "https://twitter.com/rurbit",
+                                        target: "_blank",
+                                        rel: "noreferrer noopener",
                                         className: "mt-8 inline-flex items-center gap-1.5 text-sm font-semibold text-signal-400 hover:text-signal-300",
                                         children: "Talk to our team →"
                                     })]
@@ -21168,7 +21187,7 @@ Error generating stack: ` + a.message + `
                 audience: "For individual senders & families",
                 price: "1.5%",
                 priceNote: "per transfer, min $0.01",
-                highlight: !1,
+                highlight: !0,
                 features: ["Send & receive via USSD, anywhere", "Instant Lightning settlement", "Access to full agent cash-out network", "SMS confirmations & receipts", "Basic in-app savings in BTC"],
                 cta: "Get Early Access"
             }, {
@@ -21176,8 +21195,8 @@ Error generating stack: ` + a.message + `
                 audience: "For agents, SACCOs & remittance shops",
                 price: "0.8%",
                 priceNote: "per transfer + agent dashboard",
-                highlight: !0,
-                features: ["Everything in Community", "Multi-agent liquidity dashboard", "Bulk payouts & payroll tools", "Priority settlement & support", "Dedicated onboarding specialist"],
+                highlight: !1,
+                features: ["Everything in Community", "Bulk payouts & payroll tools", "Priority settlement & support", "Dedicated onboarding specialist"],
                 cta: "Talk to Sales"
             }, {
                 name: "Enterprise",
@@ -21259,7 +21278,9 @@ Error generating stack: ` + a.message + `
                                         }), l]
                                     }, l))
                                 }), y.jsx("a", {
-                                    href: "#cta",
+                                    href: "https://twitter.com/rurbit",
+                                    target: "_blank",
+                                    rel: "noreferrer noopener",
                                     className: `mt-8 inline-flex items-center justify-center rounded-full px-6 py-3 text-sm font-semibold transition-all duration-300 hover:scale-[1.02] active:scale-[0.98] ${i.highlight ? "bg-gradient-to-r from-ember-400 to-ember-600 text-ink-950 shadow-lg shadow-ember-500/30" : "glass text-white hover:bg-white/10"}`,
                                     children: i.cta
                                 })]
@@ -21399,13 +21420,17 @@ Error generating stack: ` + a.message + `
                                     }), y.jsxs("div", {
                                         className: "mt-9 flex flex-col items-center justify-center gap-3 sm:flex-row",
                                         children: [y.jsxs("a", {
-                                            href: "#",
+                                            href: "https://twitter.com/rurbit",
+                                            target: "_blank",
+                                            rel: "noreferrer noopener",
                                             className: "group inline-flex w-full items-center justify-center gap-2 rounded-full bg-ink-950 px-7 py-3.5 text-sm font-semibold text-white shadow-xl transition-transform duration-300 hover:scale-[1.03] active:scale-[0.98] sm:w-auto",
                                             children: ["Get Early Access", y.jsx(av, {
                                                 className: "h-4 w-4 transition-transform duration-300 group-hover:translate-x-1"
                                             })]
                                         }), y.jsxs("a", {
-                                            href: "#",
+                                            href: "https://twitter.com/rurbit",
+                                            target: "_blank",
+                                            rel: "noreferrer noopener",
                                             className: "inline-flex w-full items-center justify-center gap-2 rounded-full border border-white/40 bg-white/10 px-7 py-3.5 text-sm font-semibold text-white backdrop-blur transition-colors duration-300 hover:bg-white/20 sm:w-auto",
                                             children: [y.jsx(O5, {
                                                 className: "h-4 w-4"
